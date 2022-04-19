@@ -30,11 +30,18 @@
 		return false;		
 	}
 	
+	else if(f.userNAME.value.length == 0) {
+		alert("이름은 필수 사항입니다.");
+		f.userNAME.focus();
+		return false;		
+	} 
+	
 	else if(f.userMAIL.value.length == 0) {
 		alert("이메일은 필수 사항입니다.");
 		f.userMAIL.focus();
 		return false;		
 	} 
+	
 	else {	
 		return true;
 	}

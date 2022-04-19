@@ -13,6 +13,7 @@
 	<form action="insertDB.jsp" method="post" name="user_info" onsubmit="return checkFun()">
 		아이디 : <input type="text" name="userID" size="16"><br><br>
 		비밀번호 : <input type="password" name="userPW" size="16"><br><br>
+		이름 : <input type="text" name="userNAME" size="16"><br><br>
 		이메일 : <input type="email" name="userMAIL" size="30"><br><br>
 		<input type="reset" value=" ◀ 다시작성 ">
 		<input type="submit" value=" 가입하기 ▶ ">
