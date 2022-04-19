@@ -24,14 +24,21 @@
 		String sql = "INSERT INTO members(id, passwd, name, email) VALUES('" + m_id + "','" + m_pw + "','" + m_name + "','" + m_email + "')";
 		
 		Connection conn = null;
-		Statement stmt = null;
+		Statement stmt = null;//sql 실행 객체
 		
 		try {
 			Class.forName(driverName);//jdbc 드라이버 로딩
-			conn = DriverManager.getConnection(url, user, password);//DB 연동
+			conn = DriverManager.getConnection(url, user, password);//DB 연동			
+			stmt = conn.createStatement();
 			
+			int dbFlag = stmt.executeUpdate(sql);//sql실행->실행 성공시 1 반환
 			
-			
+			if(dbFlag == 1) {
+				//out.println("회원 가입 성공!!");
+				response.sendRedirect("signupSuccess.jsp");
+			} else {
+				response.sendRedirect("signup.jsp");
+			}
 			
 		} catch(Exception e) {
 			e.printStackTrace();
