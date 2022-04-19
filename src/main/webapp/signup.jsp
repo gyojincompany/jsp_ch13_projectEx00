@@ -9,7 +9,7 @@
 <body>
 	<h2>회원 가입</h2>
 	<hr>
-	<form action="insertDB.jsp" method="post" name="user_info">
+	<form action="insertDB.jsp" method="post" name="user_info" onsubmit="return checkFun()">
 		아이디 : <input type="text" name="userID" size="16"><br><br>
 		비밀번호 : <input type="password" name="userPW" size="16"><br><br>
 		이메일 : <input type="email" name="userMAIL" size="30"><br><br>
