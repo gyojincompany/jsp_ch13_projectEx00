@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>회원 가입</title>
+<script type="text/javascript" src="js/validation.js"></script>
 </head>
 <body>
 	<h2>회원 가입</h2>
